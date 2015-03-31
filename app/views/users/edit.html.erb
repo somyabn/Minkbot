@@ -1,0 +1,13 @@
+<div id="signup_pic">
+		<div class="form_class"><%= form_for @user do |f| %>
+		  
+		  <%= f.text_field :username, required: true, :placeholder => 'Username' %><br />
+		  
+		 
+		  <%= f.email_field :email , :placeholder => 'email'%><br />
+		  
+		  <%= f.submit "Update", class: :form_button %>
+		  
+		  <% end %>
+		</div>
+	</div>

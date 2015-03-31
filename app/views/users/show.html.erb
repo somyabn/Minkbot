@@ -1,0 +1,41 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+       <h2 id ="logo" >Hello <%= @user.username %></h2>
+          <nav>
+             <ul class="nav navbar-nav navbar-right">
+             <li><%= link_to "Edit Account",edit_user_path(params[:id]), method: :get %></li>
+             <li><%= link_to "Delete Account",user_path, method: :delete %></li>
+             <li><%= link_to "Log-out", logout_path, method: :delete %></li>
+             </ul>
+          </nav>
+     </div>
+  </header>   
+     <div class="container">
+              <div class="row">
+                <div class="col-xs-16 col-md-11">
+                  <div class="bubble1">
+                  
+                  
+                  </div>
+                  <div class="bubble2">
+                  
+                  </div>
+                </div>
+      
+             
+                <div class="col-xs-16 col-md-11">
+                  
+                </div>
+              </div>
+      </div>
+     <%= form_tag(message_path(@user.id), method: :get, id: "chat", class: "form_class",remote: :true) do %>
+        <%= text_area_tag 'userInput','hi',:placeholder => "Enter your message here" %>
+        <%= submit_tag "send", data: {disable_with: "Sending..."} %>
+     <%end%>
+            
+
+
+
+<script type="text/javascript">
+  var userName = "<%= @user.username %>"              
+</script>

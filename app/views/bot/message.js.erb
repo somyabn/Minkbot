@@ -1,0 +1,2 @@
+$('.bubble2').append('<%= content_tag :div,"#{Time.now.strftime("%I:%M%p")} #{@user.username}: #{@inputMsg}",:class => "message-box1" %>');
+$('.bubble2').append('<%= content_tag :div, " #{Time.now.strftime("%I:%M%p")} Minkbot: #{@response}",:class => "message-box2"  %>');

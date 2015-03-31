@@ -1,0 +1,9 @@
+<%= render 'shared/header' %>
+	 <div class="form_class"><%= form_tag(signin_path, method: :post) do %>
+        <%= label_tag :username %>
+	    <%= text_field_tag :username %>
+	    <%= label_tag :email %>
+	    <%= email_field_tag :email %>
+	    <%= submit_tag "login" %>
+	  <%end%>
+</div>
